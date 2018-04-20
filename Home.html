@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	    <script src="js/jquery-1.10.1.min.js"></script>
+    	<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.2.js" ></script> 
+		<link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.2.min.css"/>
+		<title></title>
+		<script type="text/javascript">
+			function myCarousel(){
+			    document.getElementById("next1").click();
+			}
+			window.setInterval("myCarousel();",2000);
+		</script>
+	</head>
+	<body>
+	    <div id="" data-role="header" data-id="ca-travel" data-position="fixed" style="border: 0;">
+	    	<div style="text-align: center;line-height: 40px;background-color: #FFFFFF;">
+	    		广州大学华软软件学院
+	    	</div>
+	    </div>
+	    
+	    <div id="main" style="background-color: #EEEEEE;">
+	    	<!--搜索框-->
+	    	<div id="search" >
+	    		<input type="search" placeholder="大家都在搜：好冷啊！">
+	    	</div>
+	    	<!--四个图标-->
+	        <div>
+	        	<ul data-role = "listview">
+	        		<li>
+	        			<div class="ui-grid-c">
+					  		<div class="ui-block-a">
+					  			<a href="任务.html" data-ajax="false" style="text-decoration: none;">
+					  				<table border="0" cellspacing="" cellpadding="" >
+						  				<tr><td><img src="img/纸.png" width="100%" style="padding: 10px;"/></td></tr>
+						  				<tr><td style="text-align: center;color: #666666;font-weight: normal;">任务</td></tr>
+						  			</table>
+					  			</a>
+					  		</div>
+					  	    <div class="ui-block-b">
+					  			<a href="外卖.html" data-ajax="false" style="text-decoration: none;">
+					  				<table border="0" cellspacing="" cellpadding="">
+					  					<tr><td><img src="img/外卖.png" width="100%" style="padding: 10px;"/></td></tr>
+						  				<tr><td style="text-align: center;color: #666666;font-weight: normal;">外卖</td></tr>
+						  			</table>
+					  			</a>
+					  		</div>
+				            <div class="ui-block-c"> 
+					  			<a href="快递.html" data-ajax="false" style="text-decoration: none;">
+					  				<table border="0" cellspacing="" cellpadding="">
+						  				<tr><td><img src="img/快递.png" width="100%" style="padding: 10px;"/></td></tr>
+						  				<tr><td style="text-align: center;color: #666666;font-weight: normal;">快递</td></tr>
+					  			    </table>
+					  			</a>
+					  		</div>
+					  		<div class="ui-block-d" data-ajax="false" style="text-decoration: none;">
+					  			<a href="#">
+						  			<table border="0" cellspacing="" cellpadding="">
+						  				<tr><td><img src="img/更多.png" width="100%" style="padding: 10px;"/></td></tr>
+						  				<tr><td style="text-align: center;color: #666666;font-weight: normal;">更多</td></tr>
+						  			</table>
+					  			</a>
+					  		</div>
+					  	</div>
+	        		</li>
+	        	</ul>
+	        </div>      
+	        <div style="width: 100%;height: 10px;background: #EEEEEE;">
+	    		<!--隔空行-->
+	    	</div>
+	       
+	        <!--头条-->
+	        <div class="">
+	        	<ul data-role = "listview">
+			  		<li>
+			  			<div class="ui-grid-a">
+			  				<div class="ui-block-a">
+			  					News &nbsp;校园头条&nbsp;&nbsp;
+					  			<span style="font-size: 11px;">
+					  				今日浏览645.7万
+					  			</span>
+			  				</div>
+			  				<div class="ui-block-b">
+			  					<span style="float: right;color: #a9a9a9;">
+					  				<a href="#" style="color: #a9a9a9;text-decoration: none;font-weight: normal;">更多></a>
+					  			</span>
+			  				</div>
+			  			</div>
+			  		</li>
+			  		<li>
+			  			<div style="width: 100%;">
+			  				<table border="0" cellspacing="" cellpadding="">
+			  					<tr><td><img src="img/头条.jpg" style="width: 100%;"/></td></tr>
+			  					
+			  				</table>
+			  			</div>
+			  		    <div class="ui-grid-a" style="padding-top: 10px;">
+			  		    	<div class="ui-block-a" style="width: 30%;">
+			  		    		<span>
+			  		    			<a href="#"><img src="img/头条2.jpg" style="width: 100%;padding: 5px;"/></a>
+					  			</span>
+			  		    	</div>
+			  		    	<div class="ui-block-b" style="width: 70%;padding-top: 10px;line-height: 25px;">
+			  		    		初次见面男生最看重女生这14个方面
+			  		    	</div>
+			  		    </div>
+			  		</li>
+			  		<li>
+			  			<div class="ui-grid-a">
+			  		    	<div class="ui-block-a" style="width: 30%;">
+			  		    		<span>
+			  		    			<a href="#"><img src="img/放假新闻.jpg" style="width: 100%;padding: 5px;"/></a>
+					  			</span>
+			  		    	</div>
+			  		    	<div class="ui-block-b" style="width: 70%;padding-top: 10px;line-height: 25px;">
+			  		    		2018 全国高校寒假时间排行榜<br/>
+			  		    		有学校放了两个月
+			  		    	</div>
+			  		    </div>
+			  		</li>
+			  		<li>
+			  			<div class="ui-grid-a">
+			  		    	<div class="ui-block-a" style="width: 30%;">
+			  		    		<span>
+			  		    			<a href="#"><img src="img/考研.jpg" style="width: 100%;padding: 5px;"/></a>
+					  			</span>
+			  		    	</div>
+			  		    	<div class="ui-block-b" style="width: 70%;padding-top: 10px;line-height: 25px;">
+			  		    		我要考研，你有酒吗?<br>
+			  		    		妹子左手啤酒右手真题火了！
+			  		    	</div>
+			  		    </div>
+			  		</li>
+			  		
+		  		</ul>
+	        </div>
+	        
+	        <div style="width=100%; margin: 30px 0 30px 0;">
+		    	<table border="0" width="100%" style="text-align: center;">
+		    		<tr><td><img src="img/空.gif""/></td></tr>
+		    		<tr><td style="color: #a9a9a9;">这里空空如也~</td></tr>
+		    	</table>
+		    </div>
+	    </div>
+	    
+	    
+	    <!--脚部-->
+	    <div id="" data-role="footer" data-id="ca-travel" data-position="fixed" style="border: 0;">
+	    	<div id="myCarousel" class="carousel slide" data-rlide="carousel" data-interval="1000" style="width: 100%;">
+				<!--图片-->
+				<div class="carousel-inner">
+					<div class="item active">
+						<img src="img/广告1.jpg" alt="" width="100%">
+					</div>
+					<div class="item">
+						<img src="img/广告2.jpg" alt="" width="100%">
+					</div>
+					<div class="item">
+						<img src="img/广告3.jpg" alt="" width="100%">
+					</div>
+					<!--左右-->
+					<a id="prev1" class="carousel-control left" href="#myCarousel" data-slide="prev"></a>
+					<a id="next1" class="carousel-control right" href="#myCarousel" data-slide="next"></a>
+				</div>
+			</div>
+	    	<div >
+				<div class="ui-grid-d">
+					<div class="ui-block-a" style="text-align: center;" >
+						<a href="Home.html" data-ajax="false" style="text-decoration: none;color: #666666;font-size: 13px;font-weight: normal;">
+							<img src="img/Home.png" width="30px" height="30px"/>
+						<br/>主页
+						</a>
+					</div>
+					<div class="ui-block-b" style="text-align: center;" >
+						<a href="talkingtext.html" data-ajax="false" style="text-decoration: none;color: #666666;font-size: 13px;font-weight: normal;">
+							<img src="img/时间表.png" width="30px" height="30px"/>
+						<br/>联系人
+						</a>
+					</div>
+					<div class="ui-block-c" style="text-align: center;" >
+						<a href="发布页面.html" data-ajax="false" style="text-decoration: none;color: #666666;font-size: 13px;font-weight: normal;">
+							<img src="img/加.png" width="50px" height="50px"/>
+						<br/>
+						</a>
+					</div>
+					<div class="ui-block-d" style="text-align: center;" >
+						<a href="mymail.html" data-ajax="false" style="text-decoration: none;color: #666666;font-size: 13px;font-weight: normal;">
+							<img src="img/评论123.png" width="30px" height="30px"/>
+						<br/>消息
+						</a>
+					</div>
+					<div class="ui-block-e" style="text-align: center;" >
+						<a href="mine.html" data-ajax="false" style="text-decoration: none;color: #666666;font-size: 13px;font-weight: normal;">
+							<img src="img/我的.png" width="30px" height="30px"/>
+						<br/>我
+						</a>
+					</div>
+				</div>
+			</div>
+	</body>
+</html>
+					

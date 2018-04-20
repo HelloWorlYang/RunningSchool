@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	    <script src="js/jquery-1.10.1.min.js"></script>
+    	<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.2.js" ></script>
+		<link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.2.min.css"/>
+		<title>快递</title>
+		<style type="text/css">
+		.onclicktask-hover{
+			width: 100px;
+			border-bottom: 2px solid #2f506e;
+			margin: 0 auto;
+		}
+		.courier-form{
+			margin: 10px 20px 30px 10px;
+		}
+		.courier-form td{
+			text-align: center;
+		}
+		</style>
+		<script type="text/javascript">
+			$(function () {
+			$("[data-role='header'],[data-role='footer']").toolbar();
+			$("#mycourier-top").click(function () {
+				$("#courier-hover").removeClass("onclicktask-hover");
+				$("#mycourier-hover").addClass("onclicktask-hover");
+			});
+			$("#courier-top").click(function () {
+				$("#mycourier-hover").removeClass("onclicktask-hover");
+				$("#courier-hover").addClass("onclicktask-hover");
+			});
+			});
+		</script>
+	</head>
+	<body>
+		<!--头部-->
+		<div data-role="header" style="border: 0;" data-id="ca-travel" data-position="fixed">
+			<div style="text-align: center;line-height: 40px;background-color: #FFFFFF;">
+	    		<a href="Home.html" data-ajax="false">
+	    			<img src="img/back.png" style="float: left;position: relative;top: 15px;left: 5px;width: 10px;height: 15px;"/>
+	    		</a>
+	    		<img src="img/快递.png" style="width: 20px;height: 20px;"/>
+	    		快递
+	    	</div>
+	    	<!--菜单-->
+	    	<div class="ui-grid-a" style="padding: 20px 0px 0 30px;background: white;">
+				<div class="ui-block-a" style="text-align: center;">
+				    <a id="courier-top" href="#courier" style="text-decoration: none;color: #2f506e;font-weight: normal;">
+				    	<span>快递中心</span>
+				    	<p>
+				    	<div id="courier-hover" class="onclicktask-hover"></div>
+				    </a>
+				</div>
+				<div class="ui-block-b" style="text-align: center;">
+					<a id="mycourier-top" href="#mycourier" style="text-decoration: none;color: #2f506e;font-weight: normal;">
+				     	<span>我的快递</span> 
+			    	     <p>
+			        	<div id="mycourier-hover"></div>
+				    </a> 
+				</div>
+			</div>
+			<!--菜单到这里-->
+	    </div>
+	    <!--头部到这里-->
+	    
+	    <!--脚部-->
+	    <div data-role="footer" style="border: 0;width=100%; margin: 30px 0;">
+	    	<table border="0" width="100%" style="text-align: center;">
+	    		<tr><td><img src="img/空.gif"/></td></tr>
+	    		<tr><td style="color: #a9a9a9;">这里空空如也~</td></tr>
+	    	</table>
+	    </div>
+	    <!--脚部到这里-->   
+	    
+	    <div data-role="page" id="courier">
+	    	
+			
+			<!--快递列表-->
+			<div>
+				
+			<!--第一个快递 顺丰-->
+				<ul data-role="listview" style="height: 100px;">
+					<li>
+						<div id="" style="float: left;width: 70%;">
+							<img src="img/顺丰.jpg" width="100%"/>
+						</div>
+						<div style="float: left; width: 30%;">
+							<a href="#shunfeng-menu" data-rel="popup" style="text-decoration:none;color: #a9a9a9;float: right;font-weight: normal;margin: 30px 0;">上门收件 ></a><p/>
+			  				<div id="shunfeng-menu" data-role="popup"  data-position-to="window" data-transition="flip">
+			  				    <form class="courier-form">
+			  				    	<div style="text-align: center;width: 100%;font-size: 20px;">
+			  				    		<b>收件信息</b>
+			  				    	</div>
+			  				    	<table border="0" cellspacing="" cellpadding="">
+			  				    		<tr>
+			  				    			<td>姓 名</td>
+			  				    		    <td><input type="text" placeholder="请输入真实姓名"/></td>
+			  				    		</tr>
+			  				    		<tr>
+			  				    			<td>联系电话</td>
+			  				    		    <td><input type="text" placeholder="请输入有效电话"/></td>
+			  				    		</tr>
+			  				    		<tr>
+			  				    			<td>宿舍号</td>
+			  				    		    <td><input type="text" placeholder="宿舍号"/></td>
+			  				    		</tr>
+			  				    		<tr>
+			  				    			<td>收件时间</td>
+			  				    		    <td><input type="datetime-local"/></td>
+			  				    		</tr>
+			  				    	</table>
+			  				    	<div>
+			  				    		<div style="text-align: center;">
+			  								<a id="submit1" href="#" data-rel="back" style="text-decoration: none;font-weight: normal;width: 50%;float: left;">提交</a>
+			  				    		</div>
+			  							<div style="text-align: center;">
+			  								<a href="#" data-rel="back"  style="text-decoration: none;color: red;font-weight: normal;width: 50%;float: left;">取消</a>
+			  						    </div>
+			  				    	</div>
+			  				    </form>
+			  				</div>
+						</div>
+					</li>
+				</ul>
+				
+<!--隔空行-->	<div style="width: 100%;height: 15px;background: #EEEEEE;">
+	            </div>
+						
+				<!--第二个快递-->
+				<ul data-role="listview" style="height: 100px;">
+					<li>
+						<div id="" style="float: left;width: 70%;">
+							<img src="img/圆通.jpg" width="100%"/>
+						</div>
+						<div style="float: left; width: 30%;">
+							<a href="#shunfeng-menu" data-rel="popup" style="text-decoration:none;color: #a9a9a9;float: right;font-weight: normal;margin: 30px 0;">上门收件 ></a><p/>
+			  				<div id="shunfeng-menu" data-role="popup"  data-position-to="window" data-transition="flip">
+			  				    <form class="courier-form">
+			  				    	<div style="text-align: center;width: 100%;font-size: 20px;">
+			  				    		<b>收件信息</b>
+			  				    	</div>
+			  				    	<table border="0" cellspacing="" cellpadding="">
+			  				    		<tr>
+			  				    			<td>姓 名</td>
+			  				    		    <td><input type="text" placeholder="请输入真实姓名"/></td>
+			  				    		</tr>
+			  				    		<tr>
+			  				    			<td>联系电话</td>
+			  				    		    <td><input type="text" placeholder="请输入有效电话"/></td>
+			  				    		</tr>
+			  				    		<tr>
+			  				    			<td>宿舍号</td>
+			  				    		    <td><input type="text" placeholder="宿舍号"/></td>
+			  				    		</tr>
+			  				    		<tr>
+			  				    			<td>收件时间</td>
+			  				    		    <td><input type="datetime-local"/></td>
+			  				    		</tr>
+			  				    	</table>
+			  				    	<div>
+			  				    		<div style="text-align: center;">
+			  								<a id="submit1" href="#" data-rel="back" style="text-decoration: none;font-weight: normal;width: 50%;float: left;">提交</a>
+			  				    		</div>
+			  							<div style="text-align: center;">
+			  								<a href="#" data-rel="back"  style="text-decoration: none;color: red;font-weight: normal;width: 50%;float: left;">取消</a>
+			  						    </div>
+			  				    	</div>
+			  				    </form>
+			  				</div>
+						</div>
+					</li>
+				</ul>
+				
+				<!--隔空行-->	<div style="width: 100%;height: 15px;background: #EEEEEE;">
+	            </div>
+						
+				<!--第二个快递-->
+				<ul data-role="listview" style="height: 100px;">
+					<li>
+						<div id="" style="float: left;width: 70%;">
+							<img src="img/优速.jpg" width="100%"/>
+						</div>
+						<div style="float: left; width: 30%;">
+							<a href="#shunfeng-menu" data-rel="popup" style="text-decoration:none;color: #a9a9a9;float: right;font-weight: normal;margin: 30px 0;">上门收件 ></a><p/>
+			  				<div id="shunfeng-menu" data-role="popup"  data-position-to="window" data-transition="flip">
+			  				    <form class="courier-form">
+			  				    	<div style="text-align: center;width: 100%;font-size: 20px;">
+			  				    		<b>收件信息</b>
+			  				    	</div>
+			  				    	<table border="0" cellspacing="" cellpadding="">
+			  				    		<tr>
+			  				    			<td>姓 名</td>
+			  				    		    <td><input type="text" placeholder="请输入真实姓名"/></td>
+			  				    		</tr>
+			  				    		<tr>
+			  				    			<td>联系电话</td>
+			  				    		    <td><input type="text" placeholder="请输入有效电话"/></td>
+			  				    		</tr>
+			  				    		<tr>
+			  				    			<td>宿舍号</td>
+			  				    		    <td><input type="text" placeholder="宿舍号"/></td>
+			  				    		</tr>
+			  				    		<tr>
+			  				    			<td>收件时间</td>
+			  				    		    <td><input type="datetime-local"/></td>
+			  				    		</tr>
+			  				    	</table>
+			  				    	<div>
+			  				    		<div style="text-align: center;">
+			  								<a id="submit1" href="#" data-rel="back" style="text-decoration: none;font-weight: normal;width: 50%;float: left;">提交</a>
+			  				    		</div>
+			  							<div style="text-align: center;">
+			  								<a href="#" data-rel="back"  style="text-decoration: none;color: red;font-weight: normal;width: 50%;float: left;">取消</a>
+			  						    </div>
+			  				    	</div>
+			  				    </form>
+			  				</div>
+						</div>
+					</li>
+				</ul>
+				
+				<!--隔空行-->	<div style="width: 100%;height: 15px;background: #EEEEEE;">
+	            </div>
+						
+				<!--第二个快递-->
+				<ul data-role="listview" style="height: 100px;">
+					<li>
+						<div id="" style="float: left;width: 70%;">
+							<img src="img/申通.jpg" width="100%"/>
+						</div>
+						<div style="float: left; width: 30%;">
+							<a href="#shunfeng-menu" data-rel="popup" style="text-decoration:none;color: #a9a9a9;float: right;font-weight: normal;margin: 30px 0;">上门收件 ></a><p/>
+			  				<div id="shunfeng-menu" data-role="popup"  data-position-to="window" data-transition="flip">
+			  				    <form class="courier-form">
+			  				    	<div style="text-align: center;width: 100%;font-size: 20px;">
+			  				    		<b>收件信息</b>
+			  				    	</div>
+			  				    	<table border="0" cellspacing="" cellpadding="">
+			  				    		<tr>
+			  				    			<td>姓 名</td>
+			  				    		    <td><input type="text" placeholder="请输入真实姓名"/></td>
+			  				    		</tr>
+			  				    		<tr>
+			  				    			<td>联系电话</td>
+			  				    		    <td><input type="text" placeholder="请输入有效电话"/></td>
+			  				    		</tr>
+			  				    		<tr>
+			  				    			<td>宿舍号</td>
+			  				    		    <td><input type="text" placeholder="宿舍号"/></td>
+			  				    		</tr>
+			  				    		<tr>
+			  				    			<td>收件时间</td>
+			  				    		    <td><input type="datetime-local"/></td>
+			  				    		</tr>
+			  				    	</table>
+			  				    	<div>
+			  				    		<div style="text-align: center;">
+			  								<a id="submit1" href="#" data-rel="back" style="text-decoration: none;font-weight: normal;width: 50%;float: left;">提交</a>
+			  				    		</div>
+			  							<div style="text-align: center;">
+			  								<a href="#" data-rel="back"  style="text-decoration: none;color: red;font-weight: normal;width: 50%;float: left;">取消</a>
+			  						    </div>
+			  				    	</div>
+			  				    </form>
+			  				</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--快递列表到这里-->
+			
+	    </div>
+	    
+	</body>
+	<!--第二个页面 我的快递-->
+	<div data-role="page" id="mycourier">
+		<!--第一个我的快递-->
+				<ul data-role="listview" style="height: 100px;">
+					<li>
+						<div id="" style="float: left;width: 70%;">
+							<img src="img/顺丰.jpg" width="100%"/>
+						</div>
+						<div style="float: left; width: 30%;">
+							<a href="#shunfeng-menu" data-rel="popup" style="text-decoration:none;color: #080808;float: right;font-weight: normal;margin: 30px 0;">3 区 78 号</a><p/>
+			  				<div id="shunfeng-menu" data-role="popup"  data-position-to="window" data-transition="flip">
+			  				    <form class="courier-form">
+			  				    	<div style="text-align: center;width: 100%;font-size: 20px;">
+			  				    		<b>收件信息</b>
+			  				    	</div>
+			  				    	<table border="0" cellspacing="" cellpadding="">
+			  				    		<tr>
+			  				    			<td>姓 名</td>
+			  				    		    <td><input type="text" placeholder="请输入真实姓名"/></td>
+			  				    		</tr>
+			  				    		<tr>
+			  				    			<td>联系电话</td>
+			  				    		    <td><input type="text" placeholder="请输入有效电话"/></td>
+			  				    		</tr>
+			  				    		<tr>
+			  				    			<td>宿舍号</td>
+			  				    		    <td><input type="text" placeholder="宿舍号"/></td>
+			  				    		</tr>
+			  				    		<tr>
+			  				    			<td>收件时间</td>
+			  				    		    <td><input type="datetime-local"/></td>
+			  				    		</tr>
+			  				    	</table>
+			  				    	<div>
+			  				    		<div style="text-align: center;">
+			  								<a id="submit1" href="#" data-rel="back" style="text-decoration: none;font-weight: normal;width: 50%;float: left;">提交</a>
+			  				    		</div>
+			  							<div style="text-align: center;">
+			  								<a href="#" data-rel="back"  style="text-decoration: none;color: red;font-weight: normal;width: 50%;float: left;">取消</a>
+			  						    </div>
+			  				    	</div>
+			  				    </form>
+			  				</div>
+						</div>
+					</li>
+					<li>
+						<div  style="text-align: center;color: #8AA0B4;">
+							发布代拿信息
+						</div>
+					</li>
+				</ul>
+	</div>
+</html>

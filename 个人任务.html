@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	    <script src="js/jquery-1.10.1.min.js"></script>
+    	<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.2.js" ></script>
+		<link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.2.min.css"/>
+		<title>个人任务personal-task</title>
+	</head>
+	<style type="text/css">
+		.onclicktask-hover{
+			width: 100px;
+			border-bottom: 2px solid #2f506e;
+			margin: 0 auto;
+		}
+	</style>
+	<script type="text/javascript">
+		$(function () {
+			$("[data-role='header'],[data-role='footer']").toolbar();
+			$("#fabu").click(function () {
+				$("#jieshou-hover").removeClass("onclicktask-hover");
+				$("#fabu-hover").addClass("onclicktask-hover");
+			});
+			$("#jieshou").click(function () {
+				$("#fabu-hover").removeClass("onclicktask-hover");
+				$("#jieshou-hover").addClass("onclicktask-hover");
+			});
+			$("#cancel1").click(function () {
+				$("#take-task1").remove();
+				$("#white1").remove();
+			});
+			$("#cancel2").click(function () {
+				$("#take-task2").remove();
+				$("#white1").remove();
+			});
+			$("#del1").click(function () {
+				$("#get-task1").remove();
+			});
+		});
+	</script>
+	<body>
+		
+	<!--头部-->
+		<div data-role="header" style="border: 0;" data-id="ca-travel" data-position="fixed">
+			<div style="text-align: center;line-height: 40px;background-color: #FFFFFF;">
+	    		<a href="任务.html" data-ajax="false">
+	    			<img src="img/back.png" style="float: left;position: relative;top: 15px;left: 5px;width: 10px;height: 15px;"/>
+	    		</a>
+	    		我的任务
+	    	</div>
+		    <div  id="personal-task-top" style="background: url(img/背景2.jpg);width: 100%;height: 253px; padding: 40px 10px 0 30px;">
+				<div style="width: 100%;">
+					<img src="img/头像2.png" width="100px" height="100px" style="margin-right: 10px;"/>
+					吴亦凡&nbsp;&nbsp;<img src="img/sex男.png" width="13px" height="13px"/>
+				</div>
+				<div class="ui-grid-a" style="padding: 20px 50px 0 50px;">
+					<div class="ui-block-a">
+					    <table border="0" cellspacing="" cellpadding=""style="text-align: center;width: 100%;">
+					    	<tr><td>关注</td></tr>
+					    	<tr><td>152</td></tr>
+					    </table>
+					</div>
+					<div class="ui-block-b" >
+						<table border="0" cellspacing="" cellpadding=""style="text-align: center;width: 100%;">
+							<tr><td>粉丝</td></tr>
+							<tr><td>3524</td></tr>
+						</table>
+					</div>
+				</div>
+				<div class="ui-grid-a" style="padding: 20px 0px 0 0px;">
+					<div class="ui-block-a" style="text-align: center;">
+					    <a id="jieshou" href="#take-task" style="text-decoration: none;color: #2f506e;font-weight: normal;">
+					    	<span >
+					                               接受的任务	
+					    	</span> 
+					    	<p>
+					    	<div id="jieshou-hover" class="onclicktask-hover"></div>
+					    </a>
+					</div>
+					<div class="ui-block-b" style="text-align: center;">
+						<a id="fabu" href="#get-task" style="text-decoration: none;color: #2f506e;font-weight: normal;">
+					    	<span>
+					                               发布的任务	
+					    	</span> 
+					    	<p>
+					    	<div id="fabu-hover"></div>
+					    </a> 
+					</div>
+				</div>
+			</div>
+		</div>
+	<!--头部到这里-->		
+			
+	<!--脚部-->
+	    <div data-role="footer" style="width=100%; margin: 30px 0;border: 0;">
+	    	<table border="0" width="100%" style="text-align: center;">
+	    		<tr><td><img src="img/空.gif"/></td></tr>
+	    		<tr><td style="color: #a9a9a9;">这里空空如也~</td></tr>
+	    	</table>
+	    </div>
+	<!--脚部到这里-->
+	    
+    <!--接受的任务-->
+		<div data-role="page" id="take-task">
+		    <div  style="background-color: #f2fdff;">
+			     <div class="">
+	        	<ul data-role = "listview" id="take-task1">
+<!--第一个任务-->	  	<li>
+			  			<div id="" style="width: 100%;height: 50px;">
+			  				<div id="">
+			  					<img src="img/头像-男装.png" width="65px" height="50px"  style="float: left;padding: 0 15px 0 0;"/>
+			  				</div>
+			  				<div id="" style="padding: 5px 0 0 0;font-size: 20px;">
+			  					<b>Jackson</b>&nbsp;&nbsp;<img src="img/sex男.png" width="20px" height="20px"/>
+			  					<a href="#accpet-menu1" data-rel="popup" style="text-decoration:none;color: #a9a9a9;float: right;">...</a><p/>
+			  					<div id="accpet-menu1" data-role="popup"  data-position-to="window" data-transition="flip">
+			  					    <ul data-role = "listview" style="list-style: none;width: 200px;" >
+			  							<li style="color: #a9a9a9;background: #EEEEEE;">选择</li>
+			  							<li data-icon = "false"><a href="#" style="text-decoration: none;font-weight: normal;">私聊</a></li>
+			  							<li data-icon = "false"><a href="#" style="text-decoration: none;font-weight: normal;">分享给朋友</a></li>
+			  							<li data-icon = "false"><a href="#" style="text-decoration: none;font-weight: normal;">举报</a></li>
+			  						</ul>
+			  					</div>
+			  				</div>
+			  			</div>
+			  			<div style="padding: 15px 0 5px 0;">
+			  				<span style="color: #406ea4;">#快递#</span>顺丰快递3区121号<br></p>
+			  				<span style="color: #406ea4;">#物件#</span>两本书
+			  			</div>
+			  		</li>
+		            <li>
+			  			<div class="ui-grid-a">
+			  				<div class="ui-block-a" id="gettask1" style="color: #8AA0B4;text-align: center;">
+			  					<span style="font-weight: normal;">已确认任务</span>
+			  				</div>
+			  				<div class="ui-block-b" style="color: #8AA0B4;text-align: center;">
+			  					<a href="#quxiao1" data-rel="popup" style="text-decoration: none;color: #8d3029;font-weight: normal;">取消任务</a>
+			  					<div id="quxiao1" data-role="popup"  data-position-to="window" data-transition="flip">
+			  				        <ul data-role = "listview" style="list-style: none;width: 200px;" >
+			  							<li data-icon = "false"><a href="#" style="text-decoration: none;font-weight: normal;">你确定要取消任务吗</a></li>
+			  							<li data-icon = "false">
+			  								<div style="text-align: center;">
+			  									<a id="cancel1" href="#take-task" style="text-decoration: none;font-weight: normal;width: 50%;float: left;">确定</a>
+			  								</div>
+			  								<div style="text-align: center;">
+			  									<a href="#take-task" style="text-decoration: none;color: red;font-weight: normal;width: 50%;float: left;">否</a>
+			  							    </div>
+			  							</li>
+			  						</ul> 
+			  				    </div>
+			  				</div>
+			  			</div>
+			  		</li>
+			  	</ul>
+  <!--隔空行-->	<div id="white1" style="width: 100%;height: 10px;background: #EEEEEE;"></div>
+<!--第二个任务-->  <ul data-role = "listview" id="take-task2">
+			  		<li>
+			  			<div id="" style="width: 100%;height: 50px;">
+			  				<div id="">
+			  					<img src="img/头像1.png" width="65px" height="50px"  style="float: left;padding: 0 15px 0 0;"/>
+			  				</div>
+			  				<div id="" style="padding: 5px 0 0 0;font-size: 20px;">
+			  					<b>Bell</b>&nbsp;&nbsp;<img src="img/sex女.png" width="20px" height="20px"/>
+			  					<a href="#accpet-menu2" data-rel="popup" style="text-decoration:none;color: #a9a9a9;float: right;">...</a><p/>
+			  					<div id="accpet-menu2" data-role="popup"  data-position-to="window" data-transition="flip">
+			  					    <ul data-role = "listview" style="list-style: none;width: 200px;" >
+			  							<li style="color: #a9a9a9;background: #EEEEEE;">选择</li>
+			  							<li data-icon = "false"><a href="#" style="text-decoration: none;font-weight: normal;">私聊</a></li>
+			  							<li data-icon = "false"><a href="#" style="text-decoration: none;font-weight: normal;">分享给朋友</a></li>
+			  							<li data-icon = "false"><a href="#" style="text-decoration: none;font-weight: normal;">举报</a></li>
+			  						</ul>
+			  					</div>
+			  					
+			  				</div>
+			  			</div>
+			  			<div style="padding: 15px 0 5px 0;">
+			  				<span style="color: #406ea4;">#快递#</span>顺丰快递*区*号<br></p>
+			  				<span style="color: #406ea4;">#物件#</span>两本书
+			  			</div>
+			  		</li>
+			  		<li>
+			  			<div class="ui-grid-a">
+			  				<div class="ui-block-a" id="gettask1" style="color: #8AA0B4;text-align: center;">
+			  					<span style="font-weight: normal;">未确认任务</span>
+			  				</div>
+			  				<div class="ui-block-b" style="color: #8AA0B4;text-align: center;">
+			  					<a href="#quxiao2" data-rel="popup" style="text-decoration: none;color: #8d3029;font-weight: normal;">取消任务</a>
+			  					<div id="quxiao2" data-role="popup"  data-position-to="window" data-transition="flip">
+			  				        <ul data-role = "listview" style="list-style: none;width: 200px;" >
+			  							<li data-icon = "false"><a href="#" style="text-decoration: none;font-weight: normal;">你确定要取消任务吗</a></li>
+			  							<li data-icon = "false">
+			  								<div style="text-align: center;">
+			  									<a id="cancel2" href="#take-task" style="text-decoration: none;font-weight: normal;width: 50%;float: left;">确定</a>
+			  								</div>
+			  								<div style="text-align: center;">
+			  									<a href="#take-task" style="text-decoration: none;color: red;font-weight: normal;width: 50%;float: left;">否</a>
+			  							    </div>
+			  							</li>
+			  						</ul> 
+			  				    </div>
+			  				</div>
+			  			</div>
+			  		</li>
+		  		</ul>
+	        </div>
+			</div>
+		</div>
+	</body>
+	<!--发布的任务-->
+	    <div data-role="page" id="get-task"  style="background-color: #f2fdff;">
+		    <div  style="background-color: #f2fdff;">
+			    <div class="">
+	        	<ul data-role = "listview" id="get-task1">
+<!--第一个任务-->	  	<li>
+			  			<div id="" style="width: 100%;height: 50px;">
+			  				<div id="">
+			  					<img src="img/头像2.png" width="65px" height="50px"  style="float: left;padding: 0 15px 0 0;"/>
+			  				</div>
+			  				<div id="" style="padding: 5px 0 0 0;font-size: 20px;">
+			  					<b>吴亦凡</b>&nbsp;&nbsp;<img src="img/sex男.png" width="20px" height="20px"/>
+			  					<a href="#send-menu1" data-rel="popup" style="text-decoration:none;color: #a9a9a9;float: right;">...</a><p/>
+			  					<div id="send-menu1" data-role="popup"  data-position-to="window" data-transition="flip">
+			  					    <ul data-role = "listview" style="list-style: none;width: 200px;" >
+			  							<li style="color: #a9a9a9;background: #EEEEEE;">选择</li>
+			  							<li data-icon = "false"><a href="#" style="text-decoration: none;font-weight: normal;">分享给朋友</a></li>
+			  							<li data-icon = "false"><a href="#" style="text-decoration: none;font-weight: normal;">修改任务</a></li>
+			  						</ul>
+			  					</div>
+			  				</div>
+			  			</div>
+			  			<div style="padding: 15px 0 5px 0;">
+			  				<span style="color: #406ea4;">#快递#</span>顺丰快递3区121号<br></p>
+			  				<span style="color: #406ea4;">#物件#</span>两本书
+			  			</div>
+			  		</li>
+             		<li>
+			  			<div class="ui-grid-a">
+			  				<div class="ui-block-a" id="gettask1" style="color: #8AA0B4;text-align: center;">
+			  					<span style="font-weight: normal;">未被接受</span>
+			  				</div>
+			  				<div class="ui-block-b" style="color: #8AA0B4;text-align: center;">
+			  					<a href="#del" data-rel="popup" style="text-decoration: none;color: #8d3029;font-weight: normal;">删除任务</a>
+			  				    <div id="del" data-role="popup"  data-position-to="window" data-transition="flip">
+			  				        <ul data-role = "listview" style="list-style: none;width: 200px;" >
+			  							<li data-icon = "false"><a href="#" style="text-decoration: none;font-weight: normal;">你确定要删除任务吗</a></li>
+			  							<li data-icon = "false">
+			  								<div style="text-align: center;">
+			  									<a id="del1" href="#get-task" style="text-decoration: none;font-weight: normal;width: 50%;float: left;">确定</a>
+			  								</div>
+			  								<div style="text-align: center;">
+			  									<a href="#get-task" style="text-decoration: none;color: red;font-weight: normal;width: 50%;float: left;">否</a>
+			  							    </div>
+			  							</li>
+			  						</ul> 
+			  				    </div>
+			  				</div>
+			  			</div>
+			  		</li>
+		  		</ul>
+		  		</div>
+			</div>
+		</div>
+	
+</html>
